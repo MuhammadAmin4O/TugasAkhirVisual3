@@ -1,9 +1,9 @@
-object Form8: TForm8
-  Left = 440
-  Top = 172
+object Form10: TForm10
+  Left = 359
+  Top = 266
   Width = 1044
   Height = 540
-  Caption = 'Form Stok'
+  Caption = 'Form Detail pembelian'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,10 +17,10 @@ object Form8: TForm8
   TextHeight = 13
   object l1: TLabel
     Left = 80
-    Top = 136
-    Width = 56
+    Top = 112
+    Width = 86
     Height = 18
-    Caption = 'Deskripsi'
+    Caption = 'Pembelian ID'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -15
@@ -28,9 +28,22 @@ object Form8: TForm8
     Font.Style = []
     ParentFont = False
   end
-  object l2: TLabel
+  object l3: TLabel
     Left = 80
-    Top = 96
+    Top = 152
+    Width = 70
+    Height = 18
+    Caption = 'Supplier ID'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object l4: TLabel
+    Left = 80
+    Top = 192
     Width = 67
     Height = 18
     Caption = 'Barang ID'
@@ -41,12 +54,12 @@ object Form8: TForm8
     Font.Style = []
     ParentFont = False
   end
-  object l3: TLabel
+  object l6: TLabel
     Left = 80
-    Top = 176
-    Width = 45
+    Top = 232
+    Width = 55
     Height = 18
-    Caption = 'Jumlah'
+    Caption = 'Quantity'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -15
@@ -54,9 +67,9 @@ object Form8: TForm8
     Font.Style = []
     ParentFont = False
   end
-  object l4: TLabel
+  object l5: TLabel
     Left = 80
-    Top = 216
+    Top = 272
     Width = 39
     Height = 18
     Caption = 'Harga'
@@ -67,12 +80,12 @@ object Form8: TForm8
     Font.Style = []
     ParentFont = False
   end
-  object l6: TLabel
+  object l7: TLabel
     Left = 80
-    Top = 256
-    Width = 41
+    Top = 312
+    Width = 33
     Height = 18
-    Caption = 'Status'
+    Caption = 'Total'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -15
@@ -82,28 +95,28 @@ object Form8: TForm8
   end
   object Edit1: TEdit
     Left = 248
-    Top = 136
+    Top = 232
     Width = 177
     Height = 21
     TabOrder = 0
   end
   object Edit2: TEdit
     Left = 248
-    Top = 176
+    Top = 272
     Width = 177
     Height = 21
     TabOrder = 1
   end
   object Edit3: TEdit
     Left = 248
-    Top = 216
+    Top = 312
     Width = 177
     Height = 21
     TabOrder = 2
   end
   object b1: TButton
     Left = 80
-    Top = 352
+    Top = 360
     Width = 89
     Height = 49
     Caption = 'Baru'
@@ -112,7 +125,7 @@ object Form8: TForm8
   end
   object b2: TButton
     Left = 184
-    Top = 352
+    Top = 360
     Width = 89
     Height = 49
     Caption = 'Simpan'
@@ -121,7 +134,7 @@ object Form8: TForm8
   end
   object b3: TButton
     Left = 288
-    Top = 352
+    Top = 360
     Width = 89
     Height = 49
     Caption = 'Edit'
@@ -130,7 +143,7 @@ object Form8: TForm8
   end
   object b4: TButton
     Left = 392
-    Top = 352
+    Top = 360
     Width = 89
     Height = 49
     Caption = 'Hapus'
@@ -139,7 +152,7 @@ object Form8: TForm8
   end
   object b5: TButton
     Left = 496
-    Top = 352
+    Top = 360
     Width = 89
     Height = 49
     Caption = 'Batal'
@@ -162,24 +175,27 @@ object Form8: TForm8
   end
   object c1: TComboBox
     Left = 248
-    Top = 96
+    Top = 112
     Width = 177
     Height = 21
     ItemHeight = 13
     TabOrder = 9
-    Text = 'c1'
   end
   object c2: TComboBox
     Left = 248
-    Top = 256
+    Top = 152
     Width = 177
     Height = 21
     ItemHeight = 13
     TabOrder = 10
-    Text = 'c2'
-    Items.Strings = (
-      'true '
-      'false')
+  end
+  object c3: TComboBox
+    Left = 248
+    Top = 192
+    Width = 177
+    Height = 21
+    ItemHeight = 13
+    TabOrder = 11
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -199,7 +215,7 @@ object Form8: TForm8
     Connection = con1
     Active = True
     SQL.Strings = (
-      'select * from stok')
+      'select * from detail_pembelian')
     Params = <>
     Left = 520
     Top = 264
@@ -213,9 +229,28 @@ object Form8: TForm8
     Connection = con1
     Active = True
     SQL.Strings = (
-      'select * from barang')
+      'select * from pembelian'
+      '')
     Params = <>
     Left = 600
+    Top = 264
+  end
+  object zqry3: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select * from supplier')
+    Params = <>
+    Left = 640
+    Top = 264
+  end
+  object zqry4: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select * from barang')
+    Params = <>
+    Left = 680
     Top = 264
   end
 end

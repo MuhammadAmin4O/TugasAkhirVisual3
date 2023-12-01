@@ -9,12 +9,20 @@ uses
   Tabel_Pembelian in 'Tabel_Pembelian.pas' {Form5},
   Tabel_Penjualan in 'Tabel_Penjualan.pas' {Form6},
   Menu_Utama in 'Menu_Utama.pas' {Form7},
-  Tabel_Stok in 'Tabel_Stok.pas' {Form8};
+  Tabel_Stok in 'Tabel_Stok.pas' {Form8},
+  Tabel_Return in 'Tabel_Return.pas' {Form9},
+  Tabel_Detailpembelian in 'Tabel_Detailpembelian.pas' {Form10},
+  Tabel_Detailpenjualan in 'Tabel_Detailpenjualan.pas' {Form11},
+  Tabel_Detailreturn in 'Tabel_Detailreturn.pas' {Form12};
 
 {$R *.res}
 
 begin
   Application.Initialize;
+  Application.CreateForm(TForm12, Form12);
+  Application.CreateForm(TForm11, Form11);
+  Application.CreateForm(TForm10, Form10);
+  Application.CreateForm(TForm9, Form9);
   Application.CreateForm(TForm8, Form8);
   Application.CreateForm(TForm6, Form6);
   Application.CreateForm(TForm7, Form7);

@@ -1,6 +1,6 @@
 object Form7: TForm7
-  Left = 303
-  Top = 174
+  Left = 332
+  Top = 183
   Width = 1044
   Height = 540
   Caption = 'Menu Utama'

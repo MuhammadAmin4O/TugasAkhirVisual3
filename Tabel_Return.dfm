@@ -1,9 +1,9 @@
-object Form8: TForm8
-  Left = 440
-  Top = 172
+object Form9: TForm9
+  Left = 244
+  Top = 164
   Width = 1044
-  Height = 540
-  Caption = 'Form Stok'
+  Height = 541
+  Caption = 'Form Return'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,9 +18,9 @@ object Form8: TForm8
   object l1: TLabel
     Left = 80
     Top = 136
-    Width = 56
+    Width = 83
     Height = 18
-    Caption = 'Deskripsi'
+    Caption = 'Penjualan ID'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -15
@@ -31,9 +31,9 @@ object Form8: TForm8
   object l2: TLabel
     Left = 80
     Top = 96
-    Width = 67
+    Width = 100
     Height = 18
-    Caption = 'Barang ID'
+    Caption = 'Tanggal Return'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -15
@@ -44,9 +44,9 @@ object Form8: TForm8
   object l3: TLabel
     Left = 80
     Top = 176
-    Width = 45
+    Width = 67
     Height = 18
-    Caption = 'Jumlah'
+    Caption = 'Barang ID'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -15
@@ -57,9 +57,9 @@ object Form8: TForm8
   object l4: TLabel
     Left = 80
     Top = 216
-    Width = 39
+    Width = 51
     Height = 18
-    Caption = 'Harga'
+    Caption = 'User ID'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -15
@@ -70,6 +70,45 @@ object Form8: TForm8
   object l6: TLabel
     Left = 80
     Top = 256
+    Width = 55
+    Height = 18
+    Caption = 'Quantity'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object l5: TLabel
+    Left = 80
+    Top = 296
+    Width = 68
+    Height = 18
+    Caption = 'Harga Jual'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object l7: TLabel
+    Left = 80
+    Top = 336
+    Width = 62
+    Height = 18
+    Caption = 'Total Jual'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object l8: TLabel
+    Left = 80
+    Top = 376
     Width = 41
     Height = 18
     Caption = 'Status'
@@ -82,27 +121,27 @@ object Form8: TForm8
   end
   object Edit1: TEdit
     Left = 248
-    Top = 136
+    Top = 96
     Width = 177
     Height = 21
     TabOrder = 0
   end
   object Edit2: TEdit
     Left = 248
-    Top = 176
+    Top = 256
     Width = 177
     Height = 21
     TabOrder = 1
   end
   object Edit3: TEdit
     Left = 248
-    Top = 216
+    Top = 296
     Width = 177
     Height = 21
     TabOrder = 2
   end
   object b1: TButton
-    Left = 80
+    Left = 512
     Top = 352
     Width = 89
     Height = 49
@@ -111,7 +150,7 @@ object Form8: TForm8
     OnClick = b1Click
   end
   object b2: TButton
-    Left = 184
+    Left = 616
     Top = 352
     Width = 89
     Height = 49
@@ -120,7 +159,7 @@ object Form8: TForm8
     OnClick = b2Click
   end
   object b3: TButton
-    Left = 288
+    Left = 720
     Top = 352
     Width = 89
     Height = 49
@@ -129,7 +168,7 @@ object Form8: TForm8
     OnClick = b3Click
   end
   object b4: TButton
-    Left = 392
+    Left = 824
     Top = 352
     Width = 89
     Height = 49
@@ -138,7 +177,7 @@ object Form8: TForm8
     OnClick = b4Click
   end
   object b5: TButton
-    Left = 496
+    Left = 928
     Top = 352
     Width = 89
     Height = 49
@@ -162,24 +201,47 @@ object Form8: TForm8
   end
   object c1: TComboBox
     Left = 248
-    Top = 96
+    Top = 136
     Width = 177
     Height = 21
     ItemHeight = 13
     TabOrder = 9
-    Text = 'c1'
   end
   object c2: TComboBox
     Left = 248
-    Top = 256
+    Top = 176
     Width = 177
     Height = 21
     ItemHeight = 13
     TabOrder = 10
     Text = 'c2'
+  end
+  object c3: TComboBox
+    Left = 248
+    Top = 216
+    Width = 177
+    Height = 21
+    ItemHeight = 13
+    TabOrder = 11
+    Text = 'c3'
+  end
+  object Edit4: TEdit
+    Left = 248
+    Top = 336
+    Width = 177
+    Height = 21
+    TabOrder = 12
+  end
+  object c4: TComboBox
+    Left = 248
+    Top = 376
+    Width = 177
+    Height = 21
+    ItemHeight = 13
+    TabOrder = 13
     Items.Strings = (
-      'true '
-      'false')
+      'berhasil'
+      'tidak')
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -199,7 +261,7 @@ object Form8: TForm8
     Connection = con1
     Active = True
     SQL.Strings = (
-      'select * from stok')
+      'select * from t_return')
     Params = <>
     Left = 520
     Top = 264
@@ -213,9 +275,27 @@ object Form8: TForm8
     Connection = con1
     Active = True
     SQL.Strings = (
-      'select * from barang')
+      'select * from penjualan')
     Params = <>
     Left = 600
+    Top = 264
+  end
+  object zqry3: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select * from barang')
+    Params = <>
+    Left = 640
+    Top = 264
+  end
+  object zqry4: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select * from user')
+    Params = <>
+    Left = 680
     Top = 264
   end
 end
