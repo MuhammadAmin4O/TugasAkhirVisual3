@@ -22,7 +22,6 @@ type
     Edit3: TEdit;
     Edit4: TEdit;
     Edit5: TEdit;
-    Edit6: TEdit;
     c1: TComboBox;
     b1: TButton;
     b2: TButton;
@@ -36,6 +35,7 @@ type
     frxdbdtst1: TfrxDBDataset;
     frxrprt1: TfrxReport;
     b6: TButton;
+    Edit6: TEdit;
     procedure editbersih;
     procedure editenable;
     procedure posisiawal;

@@ -121,21 +121,21 @@ object Form9: TForm9
   end
   object Edit1: TEdit
     Left = 248
-    Top = 96
+    Top = 256
     Width = 177
     Height = 21
     TabOrder = 0
   end
   object Edit2: TEdit
     Left = 248
-    Top = 256
+    Top = 296
     Width = 177
     Height = 21
     TabOrder = 1
   end
   object Edit3: TEdit
     Left = 248
-    Top = 296
+    Top = 336
     Width = 177
     Height = 21
     TabOrder = 2
@@ -225,20 +225,13 @@ object Form9: TForm9
     TabOrder = 11
     Text = 'c3'
   end
-  object Edit4: TEdit
-    Left = 248
-    Top = 336
-    Width = 177
-    Height = 21
-    TabOrder = 12
-  end
   object c4: TComboBox
     Left = 248
     Top = 376
     Width = 177
     Height = 21
     ItemHeight = 13
-    TabOrder = 13
+    TabOrder = 12
     Items.Strings = (
       'berhasil'
       'tidak')
@@ -249,8 +242,17 @@ object Form9: TForm9
     Width = 89
     Height = 49
     Caption = 'Cetak'
-    TabOrder = 14
+    TabOrder = 13
     OnClick = b6Click
+  end
+  object dtp1: TDateTimePicker
+    Left = 248
+    Top = 96
+    Width = 178
+    Height = 21
+    Date = 45262.694286736110000000
+    Time = 45262.694286736110000000
+    TabOrder = 14
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP

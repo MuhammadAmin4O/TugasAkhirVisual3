@@ -95,38 +95,31 @@ object Form5: TForm5
   end
   object Edit1: TEdit
     Left = 248
-    Top = 56
+    Top = 96
     Width = 177
     Height = 21
     TabOrder = 0
   end
   object Edit2: TEdit
     Left = 248
-    Top = 96
+    Top = 136
     Width = 177
     Height = 21
     TabOrder = 1
   end
   object Edit3: TEdit
     Left = 248
-    Top = 136
+    Top = 176
     Width = 177
     Height = 21
     TabOrder = 2
   end
   object Edit4: TEdit
     Left = 248
-    Top = 176
-    Width = 177
-    Height = 21
-    TabOrder = 3
-  end
-  object Edit5: TEdit
-    Left = 248
     Top = 256
     Width = 177
     Height = 21
-    TabOrder = 4
+    TabOrder = 3
   end
   object b1: TButton
     Left = 80
@@ -134,7 +127,7 @@ object Form5: TForm5
     Width = 89
     Height = 49
     Caption = 'Baru'
-    TabOrder = 5
+    TabOrder = 4
     OnClick = b1Click
   end
   object b2: TButton
@@ -143,7 +136,7 @@ object Form5: TForm5
     Width = 89
     Height = 49
     Caption = 'Simpan'
-    TabOrder = 6
+    TabOrder = 5
     OnClick = b2Click
   end
   object b3: TButton
@@ -152,7 +145,7 @@ object Form5: TForm5
     Width = 89
     Height = 49
     Caption = 'Edit'
-    TabOrder = 7
+    TabOrder = 6
     OnClick = b3Click
   end
   object b4: TButton
@@ -161,7 +154,7 @@ object Form5: TForm5
     Width = 89
     Height = 49
     Caption = 'Hapus'
-    TabOrder = 8
+    TabOrder = 7
     OnClick = b4Click
   end
   object b5: TButton
@@ -170,7 +163,7 @@ object Form5: TForm5
     Width = 89
     Height = 49
     Caption = 'Batal'
-    TabOrder = 9
+    TabOrder = 8
     OnClick = b5Click
   end
   object dg1: TDBGrid
@@ -179,7 +172,7 @@ object Form5: TForm5
     Width = 449
     Height = 185
     DataSource = ds1
-    TabOrder = 10
+    TabOrder = 9
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -193,7 +186,7 @@ object Form5: TForm5
     Width = 177
     Height = 21
     ItemHeight = 13
-    TabOrder = 11
+    TabOrder = 10
     Text = 'c1'
   end
   object b6: TButton
@@ -202,8 +195,17 @@ object Form5: TForm5
     Width = 89
     Height = 49
     Caption = 'Cetak'
-    TabOrder = 12
+    TabOrder = 11
     OnClick = b6Click
+  end
+  object dtp1: TDateTimePicker
+    Left = 248
+    Top = 56
+    Width = 177
+    Height = 21
+    Date = 45262.674617858790000000
+    Time = 45262.674617858790000000
+    TabOrder = 12
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP

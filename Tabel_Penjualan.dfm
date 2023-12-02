@@ -1,6 +1,6 @@
 object Form6: TForm6
-  Left = 398
-  Top = 180
+  Left = 341
+  Top = 216
   Width = 1044
   Height = 540
   Caption = 'Form Penjualan'
@@ -95,31 +95,24 @@ object Form6: TForm6
   end
   object Edit1: TEdit
     Left = 248
-    Top = 56
+    Top = 176
     Width = 177
     Height = 21
     TabOrder = 0
   end
   object Edit2: TEdit
     Left = 248
-    Top = 176
+    Top = 216
     Width = 177
     Height = 21
     TabOrder = 1
   end
   object Edit3: TEdit
     Left = 248
-    Top = 216
-    Width = 177
-    Height = 21
-    TabOrder = 2
-  end
-  object Edit4: TEdit
-    Left = 248
     Top = 256
     Width = 177
     Height = 21
-    TabOrder = 3
+    TabOrder = 2
   end
   object b1: TButton
     Left = 80
@@ -127,7 +120,7 @@ object Form6: TForm6
     Width = 89
     Height = 49
     Caption = 'Baru'
-    TabOrder = 4
+    TabOrder = 3
     OnClick = b1Click
   end
   object b2: TButton
@@ -136,7 +129,7 @@ object Form6: TForm6
     Width = 89
     Height = 49
     Caption = 'Simpan'
-    TabOrder = 5
+    TabOrder = 4
     OnClick = b2Click
   end
   object b3: TButton
@@ -145,7 +138,7 @@ object Form6: TForm6
     Width = 89
     Height = 49
     Caption = 'Edit'
-    TabOrder = 6
+    TabOrder = 5
     OnClick = b3Click
   end
   object b4: TButton
@@ -154,7 +147,7 @@ object Form6: TForm6
     Width = 89
     Height = 49
     Caption = 'Hapus'
-    TabOrder = 7
+    TabOrder = 6
     OnClick = b4Click
   end
   object b5: TButton
@@ -163,7 +156,7 @@ object Form6: TForm6
     Width = 89
     Height = 49
     Caption = 'Batal'
-    TabOrder = 8
+    TabOrder = 7
     OnClick = b5Click
   end
   object dg1: TDBGrid
@@ -172,7 +165,7 @@ object Form6: TForm6
     Width = 449
     Height = 185
     DataSource = ds1
-    TabOrder = 9
+    TabOrder = 8
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -186,7 +179,7 @@ object Form6: TForm6
     Width = 177
     Height = 21
     ItemHeight = 13
-    TabOrder = 10
+    TabOrder = 9
     Text = 'c1'
   end
   object c2: TComboBox
@@ -195,7 +188,7 @@ object Form6: TForm6
     Width = 177
     Height = 21
     ItemHeight = 13
-    TabOrder = 11
+    TabOrder = 10
   end
   object b6: TButton
     Left = 600
@@ -203,8 +196,17 @@ object Form6: TForm6
     Width = 89
     Height = 49
     Caption = 'Cetak'
-    TabOrder = 12
+    TabOrder = 11
     OnClick = b6Click
+  end
+  object dtp1: TDateTimePicker
+    Left = 248
+    Top = 56
+    Width = 177
+    Height = 21
+    Date = 45262.688720590270000000
+    Time = 45262.688720590270000000
+    TabOrder = 12
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP

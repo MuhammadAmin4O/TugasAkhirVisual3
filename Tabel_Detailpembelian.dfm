@@ -1,6 +1,6 @@
 object Form10: TForm10
-  Left = 320
-  Top = 172
+  Left = 307
+  Top = 171
   Width = 1044
   Height = 540
   Caption = 'Form Detail pembelian'
@@ -279,7 +279,7 @@ object Form10: TForm10
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 45261.798801817100000000
-    ReportOptions.LastChange = 45262.257307708340000000
+    ReportOptions.LastChange = 45262.612887071760000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -470,6 +470,7 @@ object Form10: TForm10
           Font.Name = 'Arial'
           Font.Style = []
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
           Memo.UTF8 = (
             '[frxDBDataset1."iddetailpemb"]')
           ParentFont = False
@@ -488,6 +489,7 @@ object Form10: TForm10
           Font.Name = 'Arial'
           Font.Style = []
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
           Memo.UTF8 = (
             '[frxDBDataset1."pembelian_id"]')
           ParentFont = False
@@ -506,6 +508,7 @@ object Form10: TForm10
           Font.Name = 'Arial'
           Font.Style = []
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
           Memo.UTF8 = (
             '[frxDBDataset1."supplier_id"]')
           ParentFont = False
@@ -524,6 +527,7 @@ object Form10: TForm10
           Font.Name = 'Arial'
           Font.Style = []
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
           Memo.UTF8 = (
             '[frxDBDataset1."barang_id"]')
           ParentFont = False
@@ -542,6 +546,7 @@ object Form10: TForm10
           Font.Name = 'Arial'
           Font.Style = []
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
           Memo.UTF8 = (
             '[frxDBDataset1."qty"]')
           ParentFont = False
@@ -560,6 +565,7 @@ object Form10: TForm10
           Font.Name = 'Arial'
           Font.Style = []
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
           Memo.UTF8 = (
             '[frxDBDataset1."harga"]')
           ParentFont = False
@@ -578,6 +584,7 @@ object Form10: TForm10
           Font.Name = 'Arial'
           Font.Style = []
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
           Memo.UTF8 = (
             '[frxDBDataset1."total"]')
           ParentFont = False

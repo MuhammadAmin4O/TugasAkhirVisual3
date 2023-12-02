@@ -140,20 +140,13 @@ object Form1: TForm1
     Height = 21
     TabOrder = 4
   end
-  object Edit6: TEdit
-    Left = 248
-    Top = 296
-    Width = 177
-    Height = 21
-    TabOrder = 5
-  end
   object c1: TComboBox
     Left = 248
     Top = 136
     Width = 177
     Height = 21
     ItemHeight = 13
-    TabOrder = 6
+    TabOrder = 5
     Items.Strings = (
       'admin'
       'pembeli')
@@ -164,7 +157,7 @@ object Form1: TForm1
     Width = 89
     Height = 49
     Caption = 'Baru'
-    TabOrder = 7
+    TabOrder = 6
     OnClick = b1Click
   end
   object b2: TButton
@@ -173,7 +166,7 @@ object Form1: TForm1
     Width = 89
     Height = 49
     Caption = 'Simpan'
-    TabOrder = 8
+    TabOrder = 7
     OnClick = b2Click
   end
   object b3: TButton
@@ -182,7 +175,7 @@ object Form1: TForm1
     Width = 89
     Height = 49
     Caption = 'Edit'
-    TabOrder = 9
+    TabOrder = 8
     OnClick = b3Click
   end
   object b4: TButton
@@ -191,7 +184,7 @@ object Form1: TForm1
     Width = 89
     Height = 49
     Caption = 'Hapus'
-    TabOrder = 10
+    TabOrder = 9
     OnClick = b4Click
   end
   object b5: TButton
@@ -200,7 +193,7 @@ object Form1: TForm1
     Width = 89
     Height = 49
     Caption = 'Batal'
-    TabOrder = 11
+    TabOrder = 10
     OnClick = b5Click
   end
   object dg1: TDBGrid
@@ -209,7 +202,7 @@ object Form1: TForm1
     Width = 449
     Height = 185
     DataSource = ds1
-    TabOrder = 12
+    TabOrder = 11
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -223,8 +216,15 @@ object Form1: TForm1
     Width = 89
     Height = 49
     Caption = 'Cetak'
-    TabOrder = 13
+    TabOrder = 12
     OnClick = b6Click
+  end
+  object Edit6: TEdit
+    Left = 248
+    Top = 296
+    Width = 177
+    Height = 21
+    TabOrder = 13
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP

@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, DB, ZAbstractRODataset, ZAbstractDataset, ZDataset,
   ZAbstractConnection, ZConnection, Grids, DBGrids, StdCtrls, frxClass,
-  frxDBSet;
+  frxDBSet, ComCtrls;
 
 type
   TForm5 = class(TForm)
@@ -20,7 +20,6 @@ type
     Edit2: TEdit;
     Edit3: TEdit;
     Edit4: TEdit;
-    Edit5: TEdit;
     b1: TButton;
     b2: TButton;
     b3: TButton;
@@ -35,6 +34,7 @@ type
     frxdbdtst1: TfrxDBDataset;
     frxrprt1: TfrxReport;
     b6: TButton;
+    dtp1: TDateTimePicker;
     procedure editbersih;
     procedure editenable;
     procedure posisiawal;
@@ -70,7 +70,6 @@ Edit2.Clear;
 Edit3.Clear;
 Edit4.Clear;
 c1.text:= '';
-Edit5.Clear;
 end;
 
 procedure TForm5.editenable;
@@ -80,7 +79,7 @@ edit2.Enabled:= True;
 edit3.Enabled:= True;
 edit4.Enabled:= True;
 c1.Enabled:= True;
-edit5.Enabled:= True;
+dtp1.enabled:=true;
 end;
 
 procedure TForm5.posisiawal;
@@ -92,7 +91,7 @@ edit2.Enabled:= false;
 edit3.Enabled:= false;
 edit4.Enabled:= false;
 c1.Enabled:= false;
-edit5.Enabled:= false;
+dtp1.Enabled:= false;
 
 b1.Enabled:= True;
 b2.Enabled:= False;
@@ -116,11 +115,11 @@ end;
 
 procedure TForm5.b2Click(Sender: TObject);
 begin
-if (Edit1.Text= '')or (Edit2.Text ='')or (Edit3.Text= '')or (Edit4.Text ='') or (c1.Text= '')or (Edit5.Text ='') then
+if (Edit1.Text ='')or (Edit2.Text= '')or (Edit3.Text ='') or (c1.Text= '')or (Edit4.Text ='') then
 begin
 ShowMessage('DATA TIDAK BOLEH KOSONG!');
 end else
-if (zqry1.Locate('no_transaksi',Edit2.Text,[])) then
+if (zqry1.Locate('no_transaksi',Edit1.Text,[])) then
 begin
 ShowMessage('DATA PEMBELIAN SUDAH DIGUNAKAN');
 posisiawal;
@@ -128,7 +127,7 @@ end else
 begin
 //simpan
 zqry1.SQL.Clear;
-zqry1.SQL.Add('insert into pembelian values (null,"'+Edit1.Text+'","'+Edit2.Text+'","'+Edit3.Text+'","'+Edit4.Text+'","'+c1.Text+'","'+Edit5.Text+'")');
+zqry1.SQL.Add('insert into pembelian values (null,"'+FormatDateTime('yyyy-mm-dd',dtp1.Date)+'","'+Edit1.Text+'","'+Edit2.Text+'","'+Edit3.Text+'","'+c1.Text+'","'+Edit4.Text+'")');
 zqry1.ExecSQL;
 
 zqry1.SQL.Clear;
@@ -142,11 +141,11 @@ end;
 
 procedure TForm5.b3Click(Sender: TObject);
 begin
-if (Edit1.Text= '')or (Edit2.Text ='')or (Edit3.Text= '')or (Edit4.Text ='') or   (c1.Text ='') or (Edit5.Text= '') then
+if (Edit1.Text ='')or (Edit2.Text= '')or (Edit3.Text ='') or   (c1.Text ='') or (Edit4.Text= '') then
 begin
 ShowMessage('INPUTAN WAJIB DIISI!');
 end else
-if (Edit1.Text = zqry1.Fields[1].AsString) and (Edit2.Text = zqry1.Fields[2].AsString) and (Edit3.Text = zqry1.Fields[3].AsString) and (Edit4.Text = zqry1.Fields[4].AsString) and (c1.Text = zqry1.Fields[5].AsString) and (Edit5.Text = zqry1.Fields[6].AsString) then
+if (dtp1.date = zqry1.Fields[1].AsDateTime) and (Edit1.Text = zqry1.Fields[2].AsString) and (Edit2.Text = zqry1.Fields[3].AsString) and (Edit3.Text = zqry1.Fields[4].AsString) and (c1.Text = zqry1.Fields[5].AsString) and (Edit4.Text = zqry1.Fields[6].AsString) then
 begin
 ShowMessage('DATA TIDAK ADA PERUBAHAN');
 posisiawal;
@@ -155,7 +154,7 @@ begin
 id:=dg1.DataSource.DataSet.FieldByName('idpembelian').AsString;
 ShowMessage('DATA BERHASIL DIUPDATE!'); //UPDATE
 zqry1.SQL.Clear;
-zqry1.SQL.Add('Update pembelian set tanggal= "'+Edit1.Text+'",no_transaksi="'+Edit2.Text+'",harga="'+Edit3.Text+'",jumlah_bayar="'+Edit4.Text+'",user_id="'+c1.Text+'",pembayaran="'+Edit5.Text+'" where idpembelian="'+id+'"');
+zqry1.SQL.Add('Update pembelian set tanggal= "'+FormatDateTime('yyyy-mm-dd',dtp1.Date)+'",no_transaksi="'+Edit1.Text+'",harga="'+Edit2.Text+'",jumlah_bayar="'+Edit3.Text+'",user_id="'+c1.Text+'",pembayaran="'+Edit4.Text+'" where idpembelian="'+id+'"');
 zqry1. ExecSQL;
 
 zqry1.SQL.Clear;
@@ -205,12 +204,12 @@ b3.Enabled:= True;
 b4.Enabled:= True;
 b5.Enabled:= True;
 id:=zqry1.Fields[0].AsString;
-Edit1.Text:= zqry1.FieldList[1].AsString;
-Edit2.Text:= zqry1.FieldList[2].AsString;
-Edit3.Text:= zqry1.FieldList[3].AsString;
-Edit4.Text:= zqry1.FieldList[4].AsString;
+dtp1.Date:= form5.zqry1.FieldList[1].AsDateTime;
+Edit1.Text:= zqry1.FieldList[2].AsString;
+Edit2.Text:= zqry1.FieldList[3].AsString;
+Edit3.Text:= zqry1.FieldList[4].AsString;
 c1.Text:= zqry1.FieldList[5].AsString;
-Edit5.Text:= zqry1.FieldList[6].AsString;
+Edit4.Text:= zqry1.FieldList[6].AsString;
 end;
 
 procedure TForm5.FormCreate(Sender: TObject);
