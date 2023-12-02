@@ -4,7 +4,7 @@ object Form5: TForm5
   Width = 1044
   Height = 540
   Caption = 'Form Pembelian'
-  Color = clBtnFace
+  Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

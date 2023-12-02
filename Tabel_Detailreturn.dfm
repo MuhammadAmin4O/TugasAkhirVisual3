@@ -4,7 +4,7 @@ object Form12: TForm12
   Width = 1044
   Height = 540
   Caption = 'Form Detail Return'
-  Color = clBtnFace
+  Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

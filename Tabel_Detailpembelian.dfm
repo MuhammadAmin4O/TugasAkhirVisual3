@@ -1,10 +1,10 @@
 object Form10: TForm10
-  Left = 359
-  Top = 266
+  Left = 320
+  Top = 172
   Width = 1044
   Height = 540
   Caption = 'Form Detail pembelian'
-  Color = clBtnFace
+  Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

@@ -4,7 +4,7 @@ object Form9: TForm9
   Width = 1044
   Height = 541
   Caption = 'Form Return'
-  Color = clBtnFace
+  Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -250,6 +250,7 @@ object Form9: TForm9
     Height = 49
     Caption = 'Cetak'
     TabOrder = 14
+    OnClick = b6Click
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP

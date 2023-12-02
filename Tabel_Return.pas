@@ -52,6 +52,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure dg1CellClick(Column: TColumn);
     procedure FormCreate(Sender: TObject);
+    procedure b6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -245,6 +246,11 @@ begin
   c3.items.add(zqry4.fieldbyname('iduser').asstring);
   zqry4.Next;
 end;
+end;
+
+procedure TForm9.b6Click(Sender: TObject);
+begin
+frxrprt1.ShowReport();
 end;
 
 end.

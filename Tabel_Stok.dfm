@@ -4,7 +4,7 @@ object Form8: TForm8
   Width = 1044
   Height = 540
   Caption = 'Form Stok'
-  Color = clBtnFace
+  Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

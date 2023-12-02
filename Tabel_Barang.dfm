@@ -4,7 +4,7 @@ object Form2: TForm2
   Width = 1044
   Height = 465
   Caption = 'Form Barang'
-  Color = clBtnFace
+  Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
