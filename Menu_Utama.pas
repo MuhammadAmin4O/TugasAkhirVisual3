@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Menus;
+  Dialogs, StdCtrls, Buttons, Menus, frxpngimage, ExtCtrls;
 
 type
   TForm7 = class(TForm)
@@ -23,6 +23,7 @@ type
     Supplier1: TMenuItem;
     LOGOUT1: TMenuItem;
     EXIT1: TMenuItem;
+    img1: TImage;
     procedure User1Click(Sender: TObject);
     procedure Pembeli1Click(Sender: TObject);
     procedure Barang1Click(Sender: TObject);

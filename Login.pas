@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, DB, ZAbstractRODataset, ZAbstractDataset, ZDataset,
-  ZAbstractConnection, ZConnection, StdCtrls;
+  ZAbstractConnection, ZConnection, StdCtrls, frxpngimage, ExtCtrls;
 
 type
   TForm13 = class(TForm)

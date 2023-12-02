@@ -1,5 +1,5 @@
 object Form13: TForm13
-  Left = 517
+  Left = 527
   Top = 262
   Width = 489
   Height = 360
@@ -41,7 +41,7 @@ object Form13: TForm13
     ParentFont = False
   end
   object l3: TLabel
-    Left = 184
+    Left = 192
     Top = 40
     Width = 57
     Height = 24
