@@ -15,7 +15,8 @@ uses
   Tabel_Detailpenjualan in 'Tabel_Detailpenjualan.pas' {Form11},
   Tabel_Detailreturn in 'Tabel_Detailreturn.pas' {Form12},
   Login in 'Login.pas' {Form13},
-  Daftar in 'Daftar.pas' {Form14};
+  Daftar in 'Daftar.pas' {Form14},
+  Menu_Pembeli in 'Menu_Pembeli.pas' {Form15};
 
 {$R *.res}
 
@@ -35,5 +36,6 @@ begin
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TForm2, Form2);
   Application.CreateForm(TForm14, Form14);
+  Application.CreateForm(TForm15, Form15);
   Application.Run;
 end.

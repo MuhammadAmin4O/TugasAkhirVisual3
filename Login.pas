@@ -34,7 +34,7 @@ var
 
 implementation
 
-uses Menu_Utama, Daftar;
+uses Menu_Utama, Daftar, Menu_Pembeli;
 
 {$R *.dfm}
 
@@ -45,7 +45,6 @@ SQL.Clear;
 SQL.Add('select * from user where username='+QuotedStr(edit1.Text));
 open;
 end;
-
 if zqry1.RecordCount=0
 then
 Application.MessageBox('Maaf user name tidak ditemukan','INFORMASI',MB_OK or MB_ICONINFORMATION)
@@ -57,7 +56,14 @@ Application.MessageBox('Pastikan password yang anda masukkan benar','ERROR',MB_O
 else
 begin
 Application.MessageBox('LOGIN BERHASIL','INFORMASI',MB_OK or MB_ICONINFORMATION);
-Form7.Showmodal;
+if zqry1.FieldByName('status').AsString='admin' then
+begin
+form7.showmodal;
+end
+else
+begin
+Form15.Showmodal;
+end
 end;
 end;
 end;

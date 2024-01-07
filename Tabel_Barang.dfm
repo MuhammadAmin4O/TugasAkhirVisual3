@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 336
-  Top = 218
+  Left = 402
+  Top = 161
   Width = 1044
   Height = 465
   Caption = 'Form Barang'

@@ -1,6 +1,6 @@
 object Form13: TForm13
-  Left = 527
-  Top = 262
+  Left = 900
+  Top = 347
   Width = 489
   Height = 360
   Caption = 'Form Login'
